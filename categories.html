@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="store">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Categories</title>
+    <link rel="stylesheet" href="css/style.css">
+   <script type="text/javascript" src="js/angular.min.js"></script>
+
+</head>
+<body class="main-body">
+
+<header class="header">
+
+    <div class="container">
+
+        <a class="header__logo">
+
+        </a>
+
+        <ul class="nav">
+
+              <li class="nav__item"><a class="nav__link" href="index.html">ГЛАВНАЯ</a></li>
+            <li class="nav__item"><a class="nav__link" href="application.html">КАТАЛОГ ПРИЛОЖЕНИЙ</a></li>
+            <li class="nav__item"><a class="nav__link active" href="categories.html">КАТЕГОРИИ ТОВАРОВ</a></li>
+
+              <li class="nav__item nav__item_cart"><a class="nav__link nav__link_cart" href="#"></a></li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+<div class="clear"></div>
+
+
+<div class="container full-height">
+
+    <aside class="aside">
+
+        <div class="m-nav m-nav_cat-aside">
+            <span class="m-nav__title m-nav__title_cat-aside">Каталог приложений</span>
+        </div>
+
+
+        <ul class="aside-nav">
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Стандартный пакет</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Новый ЦФТ-Банк</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Cash Management</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link aside-nav__link_active" href="#">Аренда сейфов</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Банковские гарантии</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Казначейство</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Страхование</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Факторинговое обслуживание</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Переводы средств</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Расчетный центр</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Пластиковые карты</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Финансовый мониторинг</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Депозиты и вклады</a>
+            </li>
+            <li class="aside-nav__item">
+                <a class="aside-nav__link" href="#">Инвестиции</a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="categ-main">
+
+        <h4 class="categ-main__title">Каталог - аренда сейфов</h4>
+
+        <table class="categ-table" ng-controller="StoreController as store">
+
+            <thead class="categ-table__head">
+            <td></td>
+            <td class="categ-table__h-title">Наименование</td>
+            <td class="categ-table__h-title">Описание</td>
+            <td class="categ-table__h-title-price"> <span> Стоимость <br> (тыс. у.е) </span></td>
+            </thead>
+
+
+
+            <tr class="categ-table__row"  ng-repeat="product in store.products" prod-item>
+
+
+                
+            </tr>
+
+
+
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/placeholders.min.js"></script>
+<script type="text/javascript" src="js/categ.js"></script>
+<script type="text/javascript" src="js/store-directives.js"></script>
+
+
+</body>
+</html>
